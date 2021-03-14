@@ -1,0 +1,8 @@
+BrowserUtility br = new BrowserUtility();
+		driver = br.launchbrowser("chrome");
+		driver.get("https://www.freshworks.com/");
+		Element_Utility eleutl = new Element_Utility(driver);
+		for (WebElement e : eleutl.getelements(By.xpath("//*[@class=\"footer-nav\"]/li"))) {
+			System.out.println(" " + e.getTagName() + "---->" + e.getText());
+		}
+		driver.close();
