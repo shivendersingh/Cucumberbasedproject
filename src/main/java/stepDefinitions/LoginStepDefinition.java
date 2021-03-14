@@ -62,9 +62,9 @@ public class LoginStepDefinition {
 
 	@Then("user get the secret string on home screen")
 	public void user_get_the_secret_string_on_home_screen() throws InterruptedException {
-		Thread.sleep(2000);
-		System.out.println("VAlue"+driver.findElement(By.id("result")).getText());
-		Assert.assertNotNull(driver.findElement(By.id("result")).getText());
+		Thread.sleep(5000);
+		System.out.println("VAlue"+driver.findElement(By.xpath("//*[@id=\"result\"]")).getText());
+		Assert.assertNotNull(driver.findElement(By.xpath("//*[@id=\"result\"]")).getText());
 	}
 
 	@Then("Close the browser")
